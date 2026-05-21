@@ -4,7 +4,6 @@ import Icon from './Icon.jsx';
 const items = [
   { to: '/', label: 'Connect', icon: 'wifi', matches: ['/', '/connected'] },
   { to: '/magazine', label: 'Articles', icon: 'auto_stories', matches: ['/magazine'] },
-  { to: '/gallery', label: 'Gallery', icon: 'collections', matches: ['/gallery'] },
   { to: '/vouchers', label: 'Vouchers', icon: 'local_activity', matches: ['/vouchers'] },
 ];
 
