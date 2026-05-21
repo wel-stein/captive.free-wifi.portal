@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Express Bus</title>
+    <script>
+      // Static-host SPA fallback: when the server serves this 404 page for an
+      // unknown path, rewrite to the matching HashRouter URL and reload.
+      (function () {
+        var loc = window.location;
+        var path = loc.pathname || '/';
+        var search = loc.search || '';
+        var hash = loc.hash || '';
+        // Already a hash route — leave it alone.
+        if (hash && hash.indexOf('#/') === 0) {
+          loc.replace('/' + hash);
+          return;
+        }
+        loc.replace('/#' + path + search);
+      })();
+    </script>
+    <meta http-equiv="refresh" content="0; url=/" />
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
